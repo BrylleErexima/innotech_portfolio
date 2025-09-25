@@ -6,14 +6,16 @@
   <title>Innotech Company</title>
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/style.css"/>
+  <!-- Bootstrap Icons CDN (moved to head for validity) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="./css/Styles.css" /> <!-- Your CSS file -->
 </head>
 <body>
 
 <!-- 1. Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
-    <a class="navbar-brand" href="#">Innotech</a>
+    <a class="navbar-brand" href="#">Innotech Solutions</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -36,12 +38,28 @@
   </div>
 </nav>
 
-<!-- 2. Hero Section -->
-<section class="bg-light text-center py-5">
-  <div class="container">
-    <h1 class="display-4 fw-bold">Empowering Your Digital Dreams</h1>
-    <p class="lead mb-4">Innovative solutions for your business growth.</p>
+<!-- 2. Hero Section with Nyan Cat 2-Inspired Particles -->
+<section class="hero text-center py-5 position-relative" style="  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;">
+  <div id="particles-js" class="particles"></div>
+  <div class="hero-content position-relative" style=" position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;">
+    <h1 class="display-4 fw-bold text-primary" style=" ">Innotech Solutions</h1>
+    <p class="lead mb-4 fw text-primary" style=" ">Innovative solutions for your business growth.</p>
     <a href="#services" class="btn btn-primary btn-lg" role="button">Get Started</a>
+    <p class="mt-3">
+      <small>
+        <a href="https://vincentgarreau.com/particles.js/#nyancat2" target="_blank" class="text-light">
+        </a>
+      </small>
+    </p>
   </div>
 </section>
 
@@ -85,25 +103,25 @@
     <div class="row g-3">
       <div class="col-sm-6 col-md-3">
         <figure class="figure">
-          <img src="./img/ProjectOne.jpg" class="figure-img img-fluid rounded" alt="Project 1 screenshot" />
+          <img src="./img/ProjectOne.jpg" class="figure-img img-fluid rounded portfolio-img" alt="Project 1 screenshot" /> <!-- Added your portfolio-img class -->
           <figcaption class="figure-caption text-center">Project One</figcaption>
         </figure>
       </div>
       <div class="col-sm-6 col-md-3">
         <figure class="figure">
-          <img src="./img/ProjectTwo.jpg" class="figure-img img-fluid rounded" alt="Project 2 screenshot" />
+          <img src="./img/ProjectTwo.jpg" class="figure-img img-fluid rounded portfolio-img" alt="Project 2 screenshot" />
           <figcaption class="figure-caption text-center">Project Two</figcaption>
         </figure>
       </div>
       <div class="col-sm-6 col-md-3">
         <figure class="figure">
-          <img src="./img/ProjectThree.jpg" class="figure-img img-fluid rounded" alt="Project 3 screenshot" />
+          <img src="./img/ProjectThree.jpg" class="figure-img img-fluid rounded portfolio-img" alt="Project 3 screenshot" />
           <figcaption class="figure-caption text-center">Project Three</figcaption>
         </figure>
       </div>
       <div class="col-sm-6 col-md-3">
         <figure class="figure">
-          <img src="./img/ProjectFour.jpg" class="figure-img img-fluid rounded" alt="Project 4 screenshot" />
+          <img src="./img/ProjectFour.jpg" class="figure-img img-fluid rounded portfolio-img" alt="Project 4 screenshot" />
           <figcaption class="figure-caption text-center">Project Four</figcaption>
         </figure>
       </div>
@@ -171,6 +189,104 @@
 <!-- Bootstrap JS Bundle (includes Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+<!-- Particles.js Library (CDN) -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- Nyan Cat 2-Inspired Particles Config (Inline Script) -->
+<script>
+  // Initialize particles in hero section with Nyan Cat 2-style config (rainbow trails, fun movement)
+  particlesJS('particles-js', {
+    "particles": {
+      "number": {
+        "value": 50, // Fewer for hero-only performance
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": ["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#0000ff", "#4b0082", "#9400d3"] // Rainbow colors
+      },
+      "shape": {
+        "type": "circle", // Or "image" for cat: add "image": {"src": "img/nyancat.svg", "width": 50, "height": 50}
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        }
+      },
+      "opacity": {
+        "value": 0.8,
+        "random": true,
+        "anim": {
+          "enable": true,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 4,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 120,
+        "color": "#ffffff", // White lines, but rainbow via particle colors
+        "opacity": 0.6,
+        "width": 2
+      },
+      "move": {
+        "enable": true,
+        "speed": 4,
+        "direction": "right", // Horizontal trail like Nyan Cat
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab" // Interactive grab for fun
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 200,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "push": {
+          "particles_nb": 4
+        }
+      }
+    },
+    "retina_detect": true
+  });
+
+  console.log('Nyan Cat 2-inspired particles loaded in hero!');
+</script>
+
 <!-- Form validation script -->
 <script>
   (() => {
@@ -185,12 +301,6 @@
     }, false);
   })();
 </script>
-
-<!-- Bootstrap Icons CDN for social icons -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-/>
 
 </body>
 </html>
