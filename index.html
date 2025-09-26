@@ -39,30 +39,32 @@
 </nav>
 
 <!-- 2. Hero Section with Nyan Cat 2-Inspired Particles -->
-<section class="hero text-center py-5 position-relative" style="  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+<section class="hero text-center py-5" style="
   position: relative;
   min-height: 600px;
-  overflow: hidden;">
-  <div id="particles-js" class="particles"></div>
-  <div class="hero-content position-relative" style=" position: relative;
-  z-index: 1;
-  width: 100%;
-  text-align: center;">
-    <h1 class="display-4 fw-bold text-primary" style=" ">Innotech Solutions</h1>
-    <p class="lead mb-4 fw text-primary" style=" ">Innovative solutions for your business growth.</p>
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+">
+  <div id="particles-js" style="
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  "></div>
+  <div class="hero-content" style="
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+  ">
+    <h1 class="display-4 fw-bold text-primary">Innotech Solutions</h1>
+    <p class="lead mb-4 fw text-primary">Innovative solutions for your business growth.</p>
     <a href="#services" class="btn btn-primary btn-lg" role="button">Get Started</a>
-    <p class="mt-3">
-      <small>
-        <a href="https://vincentgarreau.com/particles.js/#nyancat2" target="_blank" class="text-light">
-        </a>
-      </small>
-    </p>
   </div>
 </section>
-
 <!-- 3. Services Section -->
 <section id="services" class="py-5">
   <div class="container">
